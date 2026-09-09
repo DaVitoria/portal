@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/login.css">
+    <title>Entrar no Sistema</title>
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <h1 class="login-title">Entrar no Sistema</h1>
+
+        <form id="login-form" novalidate>
+
+            <!-- USERNAME -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Digite o seu username"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <!-- PASSWORD -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Digite a sua password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <!-- MENSAGEM DE ERRO (Escondida por padrão) -->
+            <div class="form-errors" id="form-errors" role="alert" style="display: none;">
+                <p id="error-message">Username ou password incorretos.</p>
+            </div>
+
+            <!-- BOTÃO SUBMIT -->
+            <button type="submit" class="login-button">
+                Entrar
+            </button>
+
+            <!-- LINK PARA CADASTRO -->
+            <p class="switch-page">
+                Ainda não tem conta? <a href="./signup.html">Registe-se aqui</a>
+            </p>
+
+        </form>
+
+    </main>
+
+    <script src="../assets/js/login.js"></script>
+</body>
+
+</html>

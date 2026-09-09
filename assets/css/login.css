@@ -1,0 +1,282 @@
+/* =========================================================
+   ESTILOS GERAIS & REINICIALIZAÇÃO BÁSICA
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1f2937;
+    background-color: #f9fafb;
+}
+
+/* =========================================================
+   CONTAINERS (PÁGINAS DE LOGIN E CADASTRO)
+========================================================= */
+
+.login-page,
+.signup-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.login-container,
+.signup-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border: 1px solid #e5e7eb;
+}
+
+/* =========================================================
+   TÍTULOS E TEXTOS
+========================================================= */
+
+.login-title,
+.signup-title {
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.switch-page {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.switch-page a {
+    color: #14b8a6;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.switch-page a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   FORMULÁRIOS E INPUTS
+========================================================= */
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #1f2937;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.form-group input:focus {
+    background-color: #ffffff;
+    border-color: #14b8a6;
+    box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+}
+
+/* Classe dinâmica de erro aplicada via JS no input */
+.form-group input.input-error {
+    border-color: #ef4444;
+}
+
+.form-group input.input-error:focus {
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+}
+
+/* =========================================================
+   MENSAGENS DE ERRO
+========================================================= */
+
+.form-errors {
+    margin-bottom: 20px;
+    padding: 12px 14px;
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    color: #dc2626;
+    animation: fadeIn 0.2s ease-in-out;
+}
+
+.form-errors p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.login-button,
+.signup-button {
+    width: 100%;
+    padding: 12px 20px;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #14b8a6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.login-button:hover,
+.signup-button:hover {
+    background-color: #0d9488;
+}
+
+.login-button:active,
+.signup-button:active {
+    transform: scale(0.99);
+}
+
+/* =========================================================
+DESCRIÇÃO DO FORMULÁRIO
+========================================================= */
+
+.form-description {
+margin-bottom: 25px;
+
+
+text-align: center;
+
+font-size: 16px;
+
+line-height: 1.6;
+
+color: #6b7280;
+
+
+}
+
+/* =========================================================
+CHECKBOX
+========================================================= */
+
+.checkbox-group label {
+display: flex;
+
+
+align-items: center;
+
+gap: 10px;
+
+cursor: pointer;
+
+font-size: 15px;
+
+
+}
+
+.checkbox-group input {
+width: 18px;
+height: 18px;
+
+
+cursor: pointer;
+
+
+}
+
+/* =========================================================
+SELECT
+========================================================= */
+
+.form-group select {
+cursor: pointer;
+}
+
+/* =========================================================
+MENSAGEM DE SUCESSO
+========================================================= */
+
+.form-success {
+margin-bottom: 18px;
+
+
+padding: 16px;
+
+background-color: #d1fae5;
+
+border: 1px solid #a7f3d0;
+
+border-radius: 10px;
+
+color: #047857;
+
+font-size: 15px;
+
+
+}
+
+/* =========================================================
+CAMPOS DESATIVADOS
+========================================================= */
+
+.form-group input:disabled {
+background-color: #e5e7eb;
+
+
+color: #6b7280;
+
+cursor: not-allowed;
+
+
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+@media (max-width: 480px) {
+    .signup-container,
+    .login-container {
+        padding: 24px 16px;
+    }
+
+    .signup-title,
+    .login-title {
+        font-size: 22px;
+    }
+}
